@@ -18,17 +18,17 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      documentJSON: [],
+      documentJSON: undefined,
     };
   }
   //https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts/')
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then((resposta) => {
         if (resposta.ok) {
           return resposta.json();
         } else {
-          console.log("Error connectant amb https://jsonplaceholder.typicode.com/posts/")
+          console.log("Error connectant amb https://jsonplaceholder.typicode.com/posts/1")
         }
       })
       .then(respostaJson => {
