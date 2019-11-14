@@ -92,7 +92,7 @@ export default class App extends Component {
         console.log("Error de xarxa: " + error);
       });
   }
-
+  //Borrar el post 1
   deletePost() {
     let url = 'https://jsonplaceholder.typicode.com/posts/1';
     fetch(url, {
